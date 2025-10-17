@@ -1,78 +1,143 @@
-Campus Hostel Booking System Campus Hostel is a full-featured web application for managing hostel room bookings, designed for universities. Built using Java Servlets/JSP, MySQL, and Apache Tomcat, it supports both student and admin roles with modern UI and secure authentication.
+# 🏫 Campus Hostel Booking System
 
-Features Student & Admin Login Secure login system with user roles selection.
+Welcome to *Campus Hostel* — a full-featured 💻 web app for managing hostel room bookings in universities!
+Built with *Java Servlets/JSP, **MySQL, and **Apache Tomcat, it provides secure logins for both **Students* and *Admins*, featuring a modern glassmorphic UI and real-time booking updates.
 
-Browse Rooms
+---
 
-Filter rooms by type, floor, and availability.
+## 🌟 Features
 
-View amenities, pricing in ₹, and real images (configurable).
+### 👥 Student & Admin Login
 
-Room Booking:
+* 🔐 Secure authentication with role-based access
+* 🧑‍🎓 Student dashboard for tracking bookings
+* 🧑‍💼 Admin dashboard for managing rooms, hostels, and students
 
-Real-time room status (Available, Booked).
+### 🏠 Room Booking
 
-Book rooms with instant updates and notifications.
+* 🛏 Browse and filter rooms by type, floor, and availability
+* 📸 View amenities, prices (₹), and real room images
+* ⚡ Book rooms instantly with live status updates
 
-Admin Dashboard:
+### 📊 Admin Dashboard
 
-Manage hostels, rooms, and students.
+* 🧩 Manage hostels, rooms, and student data
+* ✅ Approve/reject bookings
+* 🔔 View and handle notifications
 
-View all bookings, approve/reject, and handle notifications.
+### 💡 Student Dashboard
 
-Student Dashboard:
+* 📅 Check booking status in real time
+* 🏡 Track available and personal rooms
 
-See booking status.
+### 💻 Responsive UI
 
-Track personal and available rooms.
+* ✨ Sleek glassmorphic design
+* 📱 Works on mobile, tablet, and desktop
+* 🖌 Easy customization via CSS
 
-Responsive UI
+---
 
-Modern glassmorphic design.
+## 🧰 Tech Stack
 
-Mobile, tablet, and desktop friendly.
+| Technology                                        | Purpose               |
+| ------------------------------------------------- | --------------------- |
+| ☕ *Java 8+*                                     | Core backend          |
+| 🧱 *Apache Tomcat 9+*                           | Web server            |
+| 🪄 *JSP & Servlets*                             | Dynamic web pages     |
+| 🔗 *JDBC (MySQL Connector)*                     | Database connectivity |
+| 🗄 *MySQL 5.7+/8+*                             | Data storage          |
+| 🎨 *HTML5, CSS3, Bootstrap Icons, Google Fonts* | Frontend design       |
 
-Technologies Used Java 8+
+---
 
-Apache Tomcat 9+
+## ⚙ Setup Instructions
 
-JSP & Servlets
+### 🧭 Clone the Repository
 
-JDBC (MySQL Connector)
+bash
+git clone https://github.com/YOUR_USERNAME/hostel-booking-system.git
 
-MySQL 5.7+/8+
 
-Bootstrap Icons, Google Fonts
+### 🗃 Database Setup
 
-HTML5, CSS3
+1. Ensure MySQL is running.
+2. Execute /sql/hostel_booking_schema.sql to create tables and sample data.
 
-Setup Instructions
+### 🔐 Backend Configuration
 
-Clone the Repository bash git clone https://github.com/YOUR_USERNAME/hostel-booking-system.git
-Database Setup Ensure MySQL is running.
-Execute provided SQL schemas in /sql/hostel_booking_schema.sql.
+Edit your MySQL credentials in DBConnection.java:
 
-Creates all required tables and inserts initial sample data.
+java
+Connection conn = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/hostel_booking_system",
+    "root",
+    "YOUR_PASSWORD"
+);
 
-Backend Configuration Update MySQL credentials in DBConnection.java or JSPs (for development only):
-java Connection conn = DriverManager.getConnection( "jdbc:mysql://localhost:3306/hostel_booking_system", "root", "YOUR_PASSWORD"); Prefer creating a non-root MySQL user for production.
 
-Build and Deploy Use Maven (mvn clean package) if available.
-Deploy the WAR file to Tomcat’s /webapps directory.
+💡 Tip: Use a non-root user for production.
 
-Run Application
+### 🚀 Build & Deploy
 
-Visit: http://localhost:8080/HostelBookingSystem/
+If you use *Maven*:
 
-Folder Structure /src/main/java (Servlets, Models, DAO) /src/main/webapp (JSPs, HTML, images, CSS) /sql (All relevant SQL files)
+bash
+mvn clean package
 
-Screenshots
 
-Screenshot 2025-10-09 004256
-Customization Change logo and gallery images in /images. Update colors, buttons, and fonts in /css/style.css or inline JSP styles. Easily add more amenities, floor levels, and room types via database.
+Then deploy the generated WAR file to Tomcat’s /webapps folder.
 
-Credits Developed by Amrita Hariharan Design inspiration from unsplash.com and Bootstrap Icons
+### 🌐 Run the App
 
-License This project is for educational purposes. For commercial/production use, request permission or consult the project author.
+Visit → [http://localhost:8080/HostelBookingSystem/](http://localhost:8080/HostelBookingSystem/)
 
-To deploy or contribute, fork and raise pull requests!
+---
+
+## 📁 Folder Structure
+
+
+/src/main/java       -> Servlets, Models, DAO  
+/src/main/webapp     -> JSPs, HTML, CSS, images  
+/sql                 -> Database schema & data  
+
+
+---
+
+## 🖼 Screenshots
+
+
+📸 Example:
+<img width="1914" height="998" alt="Screenshot 2025-10-09 004256" src="https://github.com/user-attachments/assets/19de81b1-7e50-4d7d-9593-03ceff0f5d7c" />
+
+
+---
+
+## 🎨 Customization
+
+* 🪪 Replace logos and gallery images in /images
+* 🎨 Edit /css/style.css to tweak colors and fonts
+* 🏢 Add new amenities, floor levels, or room types via the database
+
+---
+
+## 👩‍💻 Developer
+
+*Developed by:* Amrita Hariharan
+💡 Design inspiration: [Unsplash](https://unsplash.com) & [Bootstrap Icons](https://icons.getbootstrap.com)
+
+---
+
+## 📜 License
+
+This project is for *educational purposes*.
+For commercial use, please contact the author for permission.
+
+---
+
+## 🤝 Contribute
+
+Fork it 🍴 | Star it ⭐ | Improve it 🚀
+Pull requests are always welcome!
+
+> “Great software isn’t just about code — it’s about creating something that simplifies life.” 🌍
